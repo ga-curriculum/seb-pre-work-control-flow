@@ -252,7 +252,7 @@ Inside this first function, you’ll have access to a variable named `userIsBuck
 * If `userIsBuckled` is equal to `true`, log the message `You deserve a safe driver discount!` to the console.
 * If `userIsBuckled` is equal to `false`, log the message `Click it or ticket!` to the console.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Buckle Up for Conditionals" src="https://codepen.io/GAmarketing/embed/jORVedN?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Buckle Up for Conditionals" src="https://codepen.io/GAmarketing/embed/jORVedN?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/jORVedN">
     Buckle Up for Conditionals</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.
@@ -268,7 +268,7 @@ In this challenge, we’ll program a conditional sequence to respond to a given 
 * If the price variable is greater than `10`, log the message `"______ for this? You must be joking!"` Fill in the blank with the `price` variable using string concatenation (i.e., `string1` + `string2`).
 * If neither of the conditions above are met, log the message `"Take off 10% and you've got a deal."`.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="A Tense Negotiation" src="https://codepen.io/GAmarketing/embed/ZEZBqwQ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="A Tense Negotiation" src="https://codepen.io/GAmarketing/embed/ZEZBqwQ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/ZEZBqwQ">
     A Tense Negotiation</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.
@@ -415,7 +415,7 @@ for (let i = 5; i < 10; i++) {
 
 Write a `for` loop that logs the message `"Hello?"` three times.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Echo Chamber" src="https://codepen.io/GAmarketing/embed/rNbWqPL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Echo Chamber" src="https://codepen.io/GAmarketing/embed/rNbWqPL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/rNbWqPL">
     Echo Chamber</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.
@@ -444,7 +444,7 @@ Notice the conditional `i < cookies.length`? Because array indices start at `0`,
 
 You need to make sure the whole team is ready before you roll out. We’ve provided an array of `characters`, and it’s up to you to `console.log()` each one of them by using a `for` loop.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Roll Call" src="https://codepen.io/GAmarketing/embed/ExJNdrZ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Roll Call" src="https://codepen.io/GAmarketing/embed/ExJNdrZ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/ExJNdrZ">
     Roll Call</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.
@@ -521,7 +521,7 @@ You recently invested $1,000 into cryptocurrency. Good luck! Using a `for` loop 
  Years: 2 Value: 1210
  ```
 
- <iframe height="300" style="width: 100%;" scrolling="no" title="The Wild World of Cryptocurrency" src="https://codepen.io/GAmarketing/embed/LYvbgqz?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+ <iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="The Wild World of Cryptocurrency" src="https://codepen.io/GAmarketing/embed/LYvbgqz?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/LYvbgqz">
     The Wild World of Cryptocurrency</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.
@@ -535,7 +535,7 @@ Use a `while` loop to count down the `daysUntilTheFinale` of your favorite show,
 
 Your first message should be `"Only 30 more days!"` and it should log down to `"Only 1 more days!"`.
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Countdown" src="https://codepen.io/GAmarketing/embed/VwNmEgQ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Countdown" src="https://codepen.io/GAmarketing/embed/VwNmEgQ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/VwNmEgQ">
     Countdown</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
     on <a href="https://codepen.io">CodePen</a>.

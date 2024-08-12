@@ -85,15 +85,28 @@ You can get a lot of confusing, unexpected answers to loose comparisons. **Alway
 Select all of the options that will evaluate to `true`.
 
 <fieldset>
-    <legend>Please select all that apply</legend>
-<input type='checkbox' id='answer1' value='answer1' correct='true'/><label for='answer1'>"Baked Brie" !== 'baked brie"</label><br />
-<input type='checkbox' id='answer2' value='answer2' /><label for='answer2'>17 == "17"</label><br />
-<input type='checkbox' id='answer3' value='answer3' /><label for='answer3'>17 === "17"</label><br />
-<input type='checkbox' id='answer4' value='answer4' /><label for='answer4'>5 * 5 < 20</label><br />
-<input type='checkbox' id='answer5' value='answer5' /><label for='answer5'>99 >= 99</label><br />
+  <legend>Please select all that apply</legend>
+  <input type="checkbox" id="option-one" name="option-one" correct="true" />
+  <label for="option-one">"Baked Brie" !== 'baked brie"</label>
+  <br />
+  <input type="checkbox" id="option-two" name="option-two" correct="true" />
+  <label for="option-two">17 == "17</label>
+  <br />
+  <input type="checkbox" id="option-three" name="option-three" />
+  <label for="option-three">17 === "17"</label>
+  <br />
+  <input type="checkbox" id="option-four" name="option-four" />
+  <label for="option-four">5 * 5 < 20</label>
+  <br />
+  <input type="checkbox" id="option-five" name="option-five" correct="true"/>
+  <label for="option-five">99 >= 99</label>
+  <br />
 </fieldset>
-<button class='ant-btn ant-btn-primary multiple-choice-radio-submit'>Submit Answer</button>
 
+<button class="ant-btn ant-btn-primary multiple-choice-checkbox-submit">
+  Submit Answer
+</button>
+	
 ---
 
 <h1 class="slide-header">Using Comparisons to Create Conditionals</h1>

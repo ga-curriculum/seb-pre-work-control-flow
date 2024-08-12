@@ -87,10 +87,10 @@ Select all of the options that will evaluate to `true`.
 <fieldset>
   <legend>Please select all that apply</legend>
   <input type="checkbox" id="option-one" name="option-one" correct="true" />
-  <label for="option-one">"Baked Brie" !== 'baked brie"</label>
+  <label for="option-one">"Baked Brie" !== "baked brie"</label>
   <br />
   <input type="checkbox" id="option-two" name="option-two" correct="true" />
-  <label for="option-two">17 == "17</label>
+  <label for="option-two">17 == "17"</label>
   <br />
   <input type="checkbox" id="option-three" name="option-three" />
   <label for="option-three">17 === "17"</label>

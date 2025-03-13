@@ -1,11 +1,14 @@
-<textarea id="source">
+<!-- <textarea id="source"> -->
 
 <h1 class="slide-header">Control Flow</h1>
 
 <span id=time-estimate class="color-grey-500">60 mins</span>
 
 <p id="lesson-description">
-It would be nice if we could tell computers to make us the perfect sandwich, but that’s beyond what we can ask from our electronic friends right now. What we can do, however, is tell them to make decisions based on certain conditions using logic. You’d be surprised how much computers can get done just by comparing things to each other. Let’s see how that works.
+Wouldn't it be great if we could tell a computer to make the perfect sandwich? While we’re not quite there yet, we <strong>can</strong> program computers to make decisions based on specific conditions using logic.
+
+Computers rely on <strong>comparisons and rules</strong> to determine what actions to take. Even complex programs are built on simple decision-making processes. Let’s explore how that works!
+
 </p>
 
 <h5 id="topics-header" class="color-grey-500">Topics</h5>
@@ -40,53 +43,79 @@ Loops
 
 <h1 class="slide-header">Comparison Statements</h1>
 
-Computers make their decisions based on comparisons. Are two things equal? Is one thing greater than another? These comparative statements always boil down to a single Boolean value: `true` or `false`.
+Computers make decisions by comparing values. They ask questions like:
 
-Here’s how we can write comparison statements in JavaScript:
+- **Are two values equal?**
+- **Is one number greater or smaller than another?**
 
-| Operator | Functionality                                                                                       | Usage                   |
-| -------- | --------------------------------------------------------------------------------------------------- | ----------------------- |
-| `>`      | Greater than                                                                                        | `5 > 2`                 |
-| `>=`     | Greater than or equal to                                                                            | `5 >= 5`                |
-| `<`      | Less than                                                                                           | `2 < 200`               |
-| `<=`     | Less than or equal to                                                                               | `1 <= 72`               |
-| `==`     | **Loose equality** tests if the left and right sides have equal values.                             | `5 == "5"`              |
-| `===`    | **Strict equality** tests if the left and right sides have equal values AND are the same data type. | `"apples" === "apples"` |
-| `!==`    | **Inequality** tests if the data type OR the value is different (basically, the opposite of `===`). | `5 !== "5"`             |
+These comparisons always result in a **Boolean value**: `true` or `false`.
+
+**Comparison Operators in JavaScript**
+
+| Operator | What It Does                                                              | Example Usage         | Result |
+| -------- | ------------------------------------------------------------------------- | --------------------- | ------ |
+| `>`      | Checks if the left value is **greater than** the right value.             | `5 > 2`               | `true` |
+| `>=`     | Checks if the left value is **greater than or equal to** the right value. | `5 >= 5`              | `true` |
+| `<`      | Checks if the left value is **less than** the right value.                | `2 < 200`             | `true` |
+| `<=`     | Checks if the left value is **less than or equal to** the right value.    | `1 <= 72`             | `true` |
+| `==`     | **Loose equality** (checks if values are equal, but ignores data types).  | `5 == "5"`            | `true` |
+| `===`    | **Strict equality** (checks if values AND data types are the same).       | `"apple" === "apple"` | `true` |
+| `!==`    | **Inequality** (checks if values OR data types are different).            | `5 !== "5"`           | `true` |
+
+Comparison operators are **essential for making decisions** in JavaScript. They help programs **compare values** and decide what actions to take.
+
+Next, we’ll see how to use these comparisons inside **conditional statements** to control the flow of our code!
 
 ---
 
 <h1 class="slide-header">Loose and Strict Equality</h1>
 
-It’s worth reviewing the difference between those equality and inequality operators, because they’re one of the trickiest parts of JavaScript.
+Equality operators can be **tricky** in JavaScript, so let’s break them down.
 
-- When using **loose equality comparison**, or `==`, JavaScript transforms the given values so that the data types will match. (Fancy term alert: This is called “type coercion.”)
+**Loose Equality `==`**
 
-  - `"4" == 4` would evaluate to `true`.
-  - `4 == 4` would evaluate to `true`.
-  - `5 == 4` would evaluate to `false`.
+- **Allows type conversion** (JavaScript tries to match data types before comparing).
+- This process is called **type coercion**.
 
-- When using **strict equality comparison**, or `===`, JavaScript isn’t so lenient; it makes sure the data type AND value match.
+```js
+console.log('4' == 4); // true (string "4" is converted to a number)
+console.log(4 == 4); // true (same number)
+console.log(5 == 4); // false (different numbers)
+```
 
-  - `"4" === 4` would evaluate to `false`.
-  - `4 === 4` would evaluate to `true`.
+**Strict Equality `===`**
 
-- The **inequality operator**, `!==`, is just as strict; if the data types OR the values don’t match, it will evaluate to `true`.
-  - `"4" !== 4` would evaluate to `true`.
-  - `4 !== 4` would evaluate to `false`.
+- Compares both value AND data type (no conversions).
 
-#### Programmer Tip:
+```js
+console.log('4' === 4); // false (string vs. number)
+console.log(4 === 4); // true (same number, same type)
+```
 
-You can get a lot of confusing, unexpected answers to loose comparisons. **Always use strict equality (`===` or `!==` )** to ensure the things you compare are the same value and data type.
+**Strict Inequality `!==`**
+
+- Returns `true` if either the value _or_ type is different.
+
+```js
+console.log('4' !== 4); // true (string vs. number)
+console.log(4 !== 4); // false (same number, same type)
+```
+
+**Best Practice:**
+
+- Loose comparisons `==` can lead to **unexpected results**.
+- Always use **strict equality `===` and strict inequality `!==`** for accurate comparisons.
 
 ---
 
 <h1 class="slide-header">Knowledge Check</h1>
 
-Select all of the options that will evaluate to `true`.
+Which of the following expressions will evaluate to **`true`**?
+
+Review the comparison and equality operators carefully before selecting your answers.
 
 <fieldset>
-  <legend>Please select all that apply</legend>
+  <legend>Please select all that apply:</legend>
   <input type="checkbox" id="option-one" name="option-one" correct="true" />
   <label for="option-one">"Baked Brie" !== "baked brie"</label>
   <br />
@@ -112,13 +141,20 @@ Select all of the options that will evaluate to `true`.
 
 <h1 class="slide-header">Using Comparisons to Create Conditionals</h1>
 
-Comparison statements are nice, but they’re not that powerful on their own. After all, you don’t need a computer to tell you that `100 > 1`. The real power of comparisons lies their use in **conditional statements** to control what, when, and how things happen in your program.
+Comparison statements are useful, but on their own, they don’t do much. After all, you don’t need a computer to tell you that `100 > 1`.  
 
-And guess what — you do this all the time yourself. How do you make decisions when you’re getting ready in the morning? With conditional logic, of course.
+The real power of **comparisons** comes when they are used inside **conditional statements**. Conditionals allow programs to **make decisions**—controlling what happens, when it happens, and how it happens.  
 
-<img src="./assets/conditional.png" alt="Conditional" style="width:500px;"/>
+Think about how you make decisions in daily life. For example, when getting ready in the morning, you might think:  
+- **"If it's raining, I'll take an umbrella."**  
+- **"If I'm late, I'll skip making coffee."**  
 
----
+Computers follow this same kind of **logic-based decision-making** to execute different actions based on conditions. Let’s explore how that works in JavaScript!
+
+
+<img src="./assets/conditional.png" alt="Conditional" style="width:400px;"/>
+
+--- TKTK Stopped here
 
 <h1 class="slide-header">Conditionals in Programming</h1>
 

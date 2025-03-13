@@ -5,7 +5,7 @@
 <span id=time-estimate class="color-grey-500">60 mins</span>
 
 <p id="lesson-description">
-  It would be nice if we could tell computers to make us the perfect sandwich, but that’s beyond what we can ask from our electronic friends right now. What we can do, however, is tell them to make decisions based on certain conditions using logic. You’d be surprised how much computers can get done just by comparing things to each other. Let’s see how that works.
+It would be nice if we could tell computers to make us the perfect sandwich, but that’s beyond what we can ask from our electronic friends right now. What we can do, however, is tell them to make decisions based on certain conditions using logic. You’d be surprised how much computers can get done just by comparing things to each other. Let’s see how that works.
 </p>
 
 <h5 id="topics-header" class="color-grey-500">Topics</h5>
@@ -22,7 +22,7 @@ Loops
 
 <hr>
 
-<a href="https://ga-create-api.s3.amazonaws.com/studyguides/control-flow-619bca.pdf" target="_blank" download="control_flow_study_guide.pdf" class="ant-btn" data-trackable="true" data-track-category="study guide" data-track-section="lesson page" data-track-action="download study guide"><span role="img" class="anticon"><svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><g class="download_svg__nc-icon-wrapper"><path d="M8 12c.3 0 .5-.1.7-.3L14.4 6 13 4.6l-4 4V0H7v8.6l-4-4L1.6 6l5.7 5.7c.2.2.4.3.7.3z"></path><path data-color="color-2" d="M1 14h14v2H1z"></path></g></svg></span><span> Download Study Guide</span></a>
+<a href="./assets/control_flow_study_guide.pdf" target="_blank" download="control_flow_study_guide.pdf" class="ant-btn" data-trackable="true" data-track-category="study guide" data-track-section="lesson page" data-track-action="download study guide"><span role="img" class="anticon"><svg viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><g class="download_svg__nc-icon-wrapper"><path d="M8 12c.3 0 .5-.1.7-.3L14.4 6 13 4.6l-4 4V0H7v8.6l-4-4L1.6 6l5.7 5.7c.2.2.4.3.7.3z"></path><path data-color="color-2" d="M1 14h14v2H1z"></path></g></svg></span><span> Download Study Guide</span></a>
 
 ---
 
@@ -33,7 +33,7 @@ Loops
 <ul>
   <li>Use comparison operators to compare data.</li>
   <li>Create conditional statements to control the flow of your program.</li>
-  <li>Write “for” loops and “while” loops.</li>
+  <li>Write “for” and “while” loops.</li>
 </ul>
 
 ---
@@ -44,38 +44,39 @@ Computers make their decisions based on comparisons. Are two things equal? Is on
 
 Here’s how we can write comparison statements in JavaScript:
 
-|Operator| Functionality | Usage |
-|--| -------- | ---- | 
-|`>`| Greater than | `5 > 2` | 
-| `>=`| Greater than or equal to | `5 >= 5` | 
-| `<`| Less than | `2 < 200` | 
-| `<=`| Less than or equal to | `1 <= 72` | 
-| `==`| **Loose equality** tests if the left and right sides have equal values. | `5 == "5"` | 
-|`===`| **Strict equality** tests if the left and right sides have equal values AND are the same data type. | `"apples" === "apples"` |
-| `!==` | **Inequality** tests if the data type OR the value is different (basically, the opposite of `===`). | `5 !== "5"` |
+| Operator | Functionality                                                                                       | Usage                   |
+| -------- | --------------------------------------------------------------------------------------------------- | ----------------------- |
+| `>`      | Greater than                                                                                        | `5 > 2`                 |
+| `>=`     | Greater than or equal to                                                                            | `5 >= 5`                |
+| `<`      | Less than                                                                                           | `2 < 200`               |
+| `<=`     | Less than or equal to                                                                               | `1 <= 72`               |
+| `==`     | **Loose equality** tests if the left and right sides have equal values.                             | `5 == "5"`              |
+| `===`    | **Strict equality** tests if the left and right sides have equal values AND are the same data type. | `"apples" === "apples"` |
+| `!==`    | **Inequality** tests if the data type OR the value is different (basically, the opposite of `===`). | `5 !== "5"`             |
 
 ---
+
 <h1 class="slide-header">Loose and Strict Equality</h1>
 
 It’s worth reviewing the difference between those equality and inequality operators, because they’re one of the trickiest parts of JavaScript.
 
-* When using **loose equality comparison**, or `==`, JavaScript transforms the given values so that the data types will match. (Fancy term alert: This is called “type coercion.”)
-     * `"4" == 4` would evaluate to `true`.
-     * `4 == 4` would evaluate to `true`.
-     * `5 == 4` would evaluate to `false`.
+- When using **loose equality comparison**, or `==`, JavaScript transforms the given values so that the data types will match. (Fancy term alert: This is called “type coercion.”)
 
+  - `"4" == 4` would evaluate to `true`.
+  - `4 == 4` would evaluate to `true`.
+  - `5 == 4` would evaluate to `false`.
 
-* When using **strict equality comparison**, or `===`, JavaScript isn’t so lenient; it makes sure the data type AND value match.
-     * `"4" === 4` would evaluate to `false`.
-     * `4 === 4` would evaluate to `true`.
+- When using **strict equality comparison**, or `===`, JavaScript isn’t so lenient; it makes sure the data type AND value match.
 
+  - `"4" === 4` would evaluate to `false`.
+  - `4 === 4` would evaluate to `true`.
 
-* The **inequality operator**, `!==`, is just as strict; if the data types OR the values don’t match, it will evaluate to `true`.
-     * `"4" !== 4` would evaluate to `true`.
-     * `4 !== 4` would evaluate to `false`.
-
+- The **inequality operator**, `!==`, is just as strict; if the data types OR the values don’t match, it will evaluate to `true`.
+  - `"4" !== 4` would evaluate to `true`.
+  - `4 !== 4` would evaluate to `false`.
 
 #### Programmer Tip:
+
 You can get a lot of confusing, unexpected answers to loose comparisons. **Always use strict equality (`===` or `!==` )** to ensure the things you compare are the same value and data type.
 
 ---
@@ -115,7 +116,7 @@ Comparison statements are nice, but they’re not that powerful on their own. Af
 
 And guess what — you do this all the time yourself. How do you make decisions when you’re getting ready in the morning? With conditional logic, of course.
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/conditional.png)
+<img src="./assets/conditional.png" alt="Conditional" style="width:500px;"/>
 
 ---
 
@@ -126,8 +127,8 @@ When it comes to conditionals, a computer isn’t all that different from a huma
 We write conditionals in the form of `if` statements that tell the computer to execute or skip a certain code block if the comparison comes out to be `true`.
 
 ```javascript
-if (assignmentsCompleted > .80) {
-    console.log("Ready to graduate!");
+if (assignmentsCompleted > 0.8) {
+  console.log('Ready to graduate!');
 }
 ```
 
@@ -139,19 +140,20 @@ In plain English, this is saying: “If the assignments completed are over 80%, 
 
 Let’s break down the parts of an `if` statement:
 
-* First, we have the `if` keyword to signal a comparison coming up.
-* Then, the comparison goes inside the parentheses.
-* If the comparison evaluates to `true`, the code block inside the curly braces will execute.
+- First, we have the `if` keyword to signal a comparison coming up.
+- Then, the comparison goes inside the parentheses.
+- If the comparison evaluates to `true`, the code block inside the curly braces will execute.
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/if-statement.png)
+<img src="./assets/if-statement.png" alt="If Statement" style="width:500px;"/>
 
 ---
 
 <h1 class="slide-header">Knowledge Check</h1>
 
 Let’s look back at our morning routine decisions:
-* “If the `temperature` is below 60 degrees, wear a coat.”
-* “If it’s `raining`, bring an umbrella.”
+
+- “If the `temperature` is below 60 degrees, wear a coat.”
+- “If it’s `raining`, bring an umbrella.”
 
 How would you write these as conditional statements in JavaScript? (Hint: Use a `console.log` to output what you should do in each situation.)
 
@@ -159,14 +161,14 @@ How would you write these as conditional statements in JavaScript? (Hint: Use a 
   <summary>Reveal Answer</summary>
   Here’s how we did it:
 
-  ```js
-  if (temperature < 60) {
-     console.log("Wear a coat!");
-  }
-  if (weather === "raining") {
-     console.log("Bring an umbrella!");
-  }
-  ```
+```js
+if (temperature < 60) {
+  console.log('Wear a coat!');
+}
+if (weather === 'raining') {
+  console.log('Bring an umbrella!');
+}
+```
 
 </details>
 
@@ -174,17 +176,17 @@ How would you write these as conditional statements in JavaScript? (Hint: Use a 
 
 <h1 class="slide-header">Adding More Conditionals</h1>
 
-So far, our `if` statements are limited. Something only happens when the comparison is `true`. But what about when it’s `false`? 
+So far, our `if` statements are limited. Something only happens when the comparison is `true`. But what about when it’s `false`?
 
-Conditional statements can be extended with an `else` block, which gives the computer something else to do if the conditional comes out to be `false`. 
+Conditional statements can be extended with an `else` block, which gives the computer something else to do if the conditional comes out to be `false`.
 
 In this example, it’s simply telling JavaScript, “If the assignments completed are NOT greater than 80%, tell us, ‘Better catch up on your homework!’”.
 
 ```javascript
-if (assignmentsCompleted > .80) {
-    console.log("Ready to graduate!");
+if (assignmentsCompleted > 0.8) {
+  console.log('Ready to graduate!');
 } else {
-    console.log("Better catch up on your homework!");
+  console.log('Better catch up on your homework!');
 }
 ```
 
@@ -195,12 +197,12 @@ if (assignmentsCompleted > .80) {
 Conditionals don’t stop there. If you need a conditional to check for more than two possibilities, you can add more comparisons to create an `if ... else if ... else` chain, as shown below. The first conditional that turns out to be `true` is executed, and the rest of the chain is skipped entirely:
 
 ```javascript
-if (assignmentsCompleted > .80) {
-    console.log("Ready to graduate!");
-} else if (assignmentsCompleted > .65) {
-   console.log("Better catch up on your homework!");
+if (assignmentsCompleted > 0.8) {
+  console.log('Ready to graduate!');
+} else if (assignmentsCompleted > 0.65) {
+  console.log('Better catch up on your homework!');
 } else {
-    console.log("You’ve got a lot of work left to do.");
+  console.log('You’ve got a lot of work left to do.');
 }
 ```
 
@@ -214,21 +216,21 @@ For example, choosing what to wear might entail a decision tree that considers m
 
 ```javascript
 if (temperature < 60) {
-    if (weather === "raining") {
-        console.log("It's cold and raining. Time for a heavy rain jacket.");
-    } else if (weather === "snowing") {
-        console.log("It's cold and snowing. Get out the parka.");
-    } else {
-        console.log("It's cold and clear. Feels like sweater weather today.");
-    }
+  if (weather === 'raining') {
+    console.log("It's cold and raining. Time for a heavy rain jacket.");
+  } else if (weather === 'snowing') {
+    console.log("It's cold and snowing. Get out the parka.");
+  } else {
+    console.log("It's cold and clear. Feels like sweater weather today.");
+  }
 } else {
-    if (weather === "raining") {
-        console.log("It's warm but it's raining. A light windbreaker will do.");
-    } else if (weather === "sunny") {
-        console.log("It's warm and sunny. Tank top it is.");
-    } else {
-        console.log("It's warm and clear. Regular old T-shirt day.");
-    }
+  if (weather === 'raining') {
+    console.log("It's warm but it's raining. A light windbreaker will do.");
+  } else if (weather === 'sunny') {
+    console.log("It's warm and sunny. Tank top it is.");
+  } else {
+    console.log("It's warm and clear. Regular old T-shirt day.");
+  }
 }
 ```
 
@@ -236,21 +238,21 @@ if (temperature < 60) {
 
 <h1 class="slide-header">Logical Operators</h1>
 
-So far, we've only had one comparison inside of our conditionals. However, you can combine any number of comparisons together with **logical operators**  such as AND (`&&`) and OR (`||`). You've already seen one operator, NOT (`!`), which changes any comparison into the opposite boolean.
+So far, we've only had one comparison inside of our conditionals. However, you can combine any number of comparisons together with **logical operators** such as AND (`&&`) and OR (`||`). You've already seen one operator, NOT (`!`), which changes any comparison into the opposite boolean.
 
 For example, if we only want our windbreaker when it's cold AND windy outside, we can combine those thoughts together with `&&`:
 
 ```javascript
-if(temperature === "cold" &&  windSpeed > 10){
-	console.log("Time for the windbreaker!");
+if (temperature === 'cold' && windSpeed > 10) {
+  console.log('Time for the windbreaker!');
 }
 ```
 
 Similarly, if we want our boots when its either snowing OR raining, we can. use the `||` operator:
 
 ```javascript
-if(weather === "snowing" || weather === "raining"){
-	console.log("Looks like we need to wear boots today.");
+if (weather === 'snowing' || weather === 'raining') {
+  console.log('Looks like we need to wear boots today.');
 }
 ```
 
@@ -258,12 +260,12 @@ if(weather === "snowing" || weather === "raining"){
 
 <h1 class="slide-header">Buckle Up For Conditionals</h1>
 
-Conditionals are exciting because they allow your program to make decisions based on user input. For the next few code challenges, we’ll ask you to write code inside of a *function* — don’t worry, we’ll get to functions soon! For now, functions are allowing us to test whether or not conditional logic works under different circumstances. 
+Conditionals are exciting because they allow your program to make decisions based on user input. For the next few code challenges, we’ll ask you to write code inside of a _function_ — don’t worry, we’ll get to functions soon! For now, functions are allowing us to test whether or not conditional logic works under different circumstances.
 
 Inside this first function, you’ll have access to a variable named `userIsBuckled`. Your challenge is to write a conditional statement that evaluates this variable and makes the following decisions:
 
-* If `userIsBuckled` is equal to `true`, log the message `You deserve a safe driver discount!` to the console.
-* If `userIsBuckled` is equal to `false`, log the message `Click it or ticket!` to the console.
+- If `userIsBuckled` is equal to `true`, log the message `You deserve a safe driver discount!` to the console.
+- If `userIsBuckled` is equal to `false`, log the message `Click it or ticket!` to the console.
 
 <iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="Buckle Up for Conditionals" src="https://codepen.io/GAmarketing/embed/jORVedN?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/jORVedN">
@@ -275,11 +277,11 @@ Inside this first function, you’ll have access to a variable named `userIsBuck
 
 <h1 class="slide-header">A Tense Negotiation</h1>
 
-In this challenge, we’ll program a conditional sequence to respond to a given `price` input. 
+In this challenge, we’ll program a conditional sequence to respond to a given `price` input.
 
-* If the price variable is less than `5`, log the message `"I'll take it!"`.
-* If the price variable is greater than `10`, log the message `"______ for this? You must be joking!"` Fill in the blank with the `price` variable using string concatenation (i.e., `string1` + `string2`).
-* If neither of the conditions above are met, log the message `"Take off 10% and you've got a deal."`.
+- If the price variable is less than `5`, log the message `"I'll take it!"`.
+- If the price variable is greater than `10`, log the message `"______ for this? You must be joking!"` Fill in the blank with the `price` variable using string concatenation (i.e., `string1` + `string2`).
+- If neither of the conditions above are met, log the message `"Take off 10% and you've got a deal."`.
 
 <iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="A Tense Negotiation" src="https://codepen.io/GAmarketing/embed/ZEZBqwQ?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/ZEZBqwQ">
@@ -346,11 +348,11 @@ Let's break down the loop into several parts:
 
 <h1 class="slide-header">The iterator variable</h1>
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/for-variable.png)
+<img src="./assets/for-variable.png" alt="The for Variable" style="width:500px;"/>
 
-* We start with the `for` keyword, with the **control statement** wrapped in parentheses after it.
-* In the control statement, we declare a variable upon which to operate: `let i = 0`. This variable, `i`, is our **iterator**. In this case, we’ll have it start at `0`.
-* To separate each part of our `for` loop statement, we **must use semicolons**.
+- We start with the `for` keyword, with the **control statement** wrapped in parentheses after it.
+- In the control statement, we declare a variable upon which to operate: `let i = 0`. This variable, `i`, is our **iterator**. In this case, we’ll have it start at `0`.
+- To separate each part of our `for` loop statement, we **must use semicolons**.
 
 **Note**: As you work more with loops, you’ll notice this declaration often contains `i`. It’s simply a convention that stands for “iterator.”
 
@@ -358,17 +360,17 @@ Let's break down the loop into several parts:
 
 <h1 class="slide-header">The Conditional</h1>
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/for-condition.png)
+<img src="./assets/for-condition.png" alt="the for Condition" style="width:500px;"/>
 
-* Next comes the conditional statement: `i < 100`. Whenever the loop is wondering if it should keep going, it will check this condition.
-* If the condition evaluates to `true` — in this case, if `i` is less than `100` — the loop will execute the code block and then check the conditional again.
-* Once the condition evaluates to `false`, the loop will end. Here, once the `i` variable becomes equal to `100`, this condition will become `false` and the loop will stop.
+- Next comes the conditional statement: `i < 100`. Whenever the loop is wondering if it should keep going, it will check this condition.
+- If the condition evaluates to `true` — in this case, if `i` is less than `100` — the loop will execute the code block and then check the conditional again.
+- Once the condition evaluates to `false`, the loop will end. Here, once the `i` variable becomes equal to `100`, this condition will become `false` and the loop will stop.
 
 ---
 
 <h1 class="slide-header">The Final Expression</h1>
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/for-operator.png)
+<img src="./assets/for-operator.png" alt="the for Operator" style="width:500px;"/>
 
 We’ve made it to the last part of the control statement: the **final expression**. This defines what the loop should do after each iteration of the code block. In this example, `i++` is using the **post-fix operator**, `++`, to say, “After each go-around of the loop, add `1` to the current value of the `i` variable.”
 
@@ -378,7 +380,7 @@ Although `i++` is the most common, you could perform any operation in the final 
 
 <h1 class="slide-header">The Code Block</h1>
 
-![](https://ga-instruction.s3.amazonaws.com/assets/intro-tech/js-unit-assets/for-action.png)
+<img src="./assets/for-action.png" alt="The for Action" style="width:500px;"/>
 
 Once we’ve made it out of the control statement, which tells the loop how long it should run, we get to the **code block**, which tells the loop what to do in each iteration. Here, we’re simply logging the value of `i` to the console.
 
@@ -395,6 +397,7 @@ for (let i = 0; i < 100; i++) {
 ```
 
 With all of the pieces working together, we can summarize this `for` loop like so:
+
 1. Start an iterator variable, `i`, at the value of `0`.
 2. If the value of `i` is less than `100`, execute the code block.
 3. After the code block has run, add `1` to the `i` variable.
@@ -409,7 +412,7 @@ How many times would this `for` loop run?
 
 ```javascript
 for (let i = 5; i < 10; i++) {
-    console.log(i);
+  console.log(i);
 }
 ```
 
@@ -443,9 +446,14 @@ One of the most common uses of a `for` loop is to loop through each element of a
 The loop below will `console.log` every element in the `cookies` array:
 
 ```javascript
-const cookies = ["chocolate chip", "gingersnap", "oatmeal raisin", "shortbread"];
+const cookies = [
+  'chocolate chip',
+  'gingersnap',
+  'oatmeal raisin',
+  'shortbread',
+];
 for (let i = 0; i < cookies.length; i++) {
-    console.log(cookies[i]);
+  console.log(cookies[i]);
 }
 ```
 
@@ -472,7 +480,7 @@ Let’s meet the simpler, cleaner cousin of the `for` loop: the `while` loop. It
 ```javascript
 let number = 0;
 while (number < 11) {
-    number = number + 1;
+  number = number + 1;
 }
 ```
 
@@ -491,7 +499,7 @@ The loop below, for instance, is an easy way to crash your browser and freeze up
 ```javascript
 let number = 10;
 while (number < 500) {
-    number = number - 1;
+  number = number - 1;
 }
 ```
 
@@ -504,7 +512,7 @@ The answer: Because subtracting `1` from the `number` variable will always keep 
 ```javascript
 let number = 10;
 while (number < 500) {
-    number = number - 1;
+  number = number - 1;
 }
 ```
 
@@ -515,8 +523,9 @@ while (number < 500) {
 Upon seeing how simple the `while` loop is, most beginners reach for it whenever they can. However, it’s not always the best tool for the job. You have to define a variable outside of the loop (not often a great thing), and you run the risk of infinite loops.
 
 Considering how strictly the `for` loop is defined, there’s a general rule on when each type of loop is appropriate:
-* If you know **exactly how many times** the loop should execute, use a `for` loop for its precision. This includes iterating over an array, which has a specific amount of items.
-* If you’re **not sure how many times** the loop has to run but you do know when it should stop, use a `while` loop.
+
+- If you know **exactly how many times** the loop should execute, use a `for` loop for its precision. This includes iterating over an array, which has a specific amount of items.
+- If you’re **not sure how many times** the loop has to run but you do know when it should stop, use a `while` loop.
 
 ---
 
@@ -524,15 +533,15 @@ Considering how strictly the `for` loop is defined, there’s a general rule on 
 
 You recently invested $1,000 into cryptocurrency. Good luck! Using a `for` loop and a conditional, log the value of your `investment` throughout the next 10 years by using the following rules:
 
-* Each year, the investment increases by 10%. Add 10% to the `investment` variable before logging the value.
-* In the seventh year, the investment loses 75% **instead** of increasing. Eeek!
+- Each year, the investment increases by 10%. Add 10% to the `investment` variable before logging the value.
+- In the seventh year, the investment loses 75% **instead** of increasing. Eeek!
 
- Use a `for` loop to log how many years it has been and how much the investment is worth for each year. Your logs should look like this:
- 
- ```
- Years: 1 Value: 1100
- Years: 2 Value: 1210
- ```
+Use a `for` loop to log how many years it has been and how much the investment is worth for each year. Your logs should look like this:
+
+```
+Years: 1 Value: 1100
+Years: 2 Value: 1210
+```
 
  <iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="The Wild World of Cryptocurrency" src="https://codepen.io/GAmarketing/embed/LYvbgqz?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/LYvbgqz">
@@ -540,7 +549,7 @@ You recently invested $1,000 into cryptocurrency. Good luck! Using a `for` loop 
     on <a href="https://codepen.io">CodePen</a>.
   </iframe>
 
- ---
+---
 
 <h1 class="slide-header">Countdown</h1>
 

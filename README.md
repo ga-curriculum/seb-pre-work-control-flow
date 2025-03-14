@@ -774,34 +774,28 @@ Choosing the right loop makes your code more readable, efficient, and **less lik
 
 ---
 
-<h1 class="slide-header">Tracking Your Investment</h1>
+<h1 class="slide-header">Savings Account Tracker</h1>
 
-You just invested **$1,000** into cryptocurrency—good luck!
+You just opened a savings account with `$1,000`!
 
-Using a **`for` loop** and a **conditional**, track the value of your `investment` over the next **10 years** using these rules:
+Your task is to track your balance over **5 years**, using the following rules:
 
-Growth Rules:
+1. Each year, your savings increase by `5%`.
+2. If your savings reach or exceed `$1,200`, log `"Savings goal reached!"` instead of the balance.
 
-1. **Each year**, the investment **increases by 10%**.
-   - Before logging, update `investment` by adding **10%** to its value.
-2. **In year 7**, the investment **loses 75% instead of growing**.
-
-Your Task:
-
-- Use a **`for` loop** to track the investment for **10 years**.
-- Log the **year number** and the **investment value** after each update.
-- Make sure the **special condition for year 7** is applied.
+- Use a for loop to track your savings for `5` years.
+- `Log` each year and balance after applying the interest.
+- If the savings hit $1,200 or more, log `"Savings goal reached!"` instead of the balance.
 
 Example Output:
 
 ```
-Year: 1 Value: 1100
-Year: 2 Value: 1210
-...
-Year: 7 Value: (reduced by 75%)
+Year: 1 Balance: 1050.00
+Year: 2 Balance: 1102.50
+Year: 3 Balance: 1157.62
+Year: 4 Balance: 1215.50
+Savings goal reached!
 ```
-
-Write your loop and see how your investment performs over time!
 
  <iframe sandbox="allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-forms allow-popups allow-same-origin"  height="400" style="width: 100%;" scrolling="no" title="The Wild World of Cryptocurrency" src="https://codepen.io/GAmarketing/embed/LYvbgqz?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
     See the Pen <a href="https://codepen.io/GAmarketing/pen/LYvbgqz">
